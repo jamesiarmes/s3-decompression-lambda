@@ -18,6 +18,8 @@ class Config
     )
   end
 
+  private
+
   def validate_required
     raise 'Destination bucket is required.' unless @destination
   end

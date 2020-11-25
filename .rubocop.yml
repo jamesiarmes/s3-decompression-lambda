@@ -3,3 +3,6 @@ AllCops:
 Style/GlobalVars:
   Exclude:
     - 'lambda_function.rb'
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*_spec.rb'

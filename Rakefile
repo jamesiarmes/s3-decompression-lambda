@@ -1,0 +1,9 @@
+# frozen_string_literal: true
+
+require 'rubocop/rake_task'
+
+desc 'Run RuboCop against the source code.'
+RuboCop::RakeTask.new(:rubocop) do |task|
+  task.options << '--display-cop-names'
+  task.options << '--display-style-guide'
+end

@@ -6,5 +6,6 @@ if ENV['COVERAGE']
   SimpleCov.start do
     add_filter '/spec/'
     track_files 'lib/**/*.rb'
+    minimum_coverage 98
   end
 end

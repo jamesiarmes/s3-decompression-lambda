@@ -1,0 +1,27 @@
+service: s3-decompression-lambda
+
+frameworkVersion: ">= 2.0"
+
+provider:
+  name: aws
+  runtime: ruby2.7
+
+functions:
+  s3_decompression:
+    description: Decompresses files from one S3 bucket and writes them to another.
+    handler: functions/s3_decompression.lambda_handler
+    package:
+      include:
+        - functions/s3_decompression.rb
+    environment:
+      DESTINATION_BUCKET: 'example-bucket'
+      DESTINATION_EXTENSION: 'json'
+    memorySize: 512
+    timeout: 30
+
+package:
+  include:
+    - lib/**
+
+plugins:
+  - serverless-ruby-package

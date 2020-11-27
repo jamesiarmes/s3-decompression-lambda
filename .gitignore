@@ -1,4 +1,12 @@
-.bundle
+# Ignore lock files.
+Gemfile.lock
+package-lock.json
+
+# Ignore locally installed depedencies.
 vendor
-*.zip
+node_modules
+
+# Ignore configs and artifacts.
+.bundle
+.serverless
 coverage

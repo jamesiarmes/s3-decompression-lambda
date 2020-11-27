@@ -2,7 +2,7 @@ AllCops:
   NewCops: enable
 Style/GlobalVars:
   Exclude:
-    - 'lambda_function.rb'
+    - 'functions/**/*.rb'
 Metrics/BlockLength:
   Exclude:
     - 'spec/**/*_spec.rb'

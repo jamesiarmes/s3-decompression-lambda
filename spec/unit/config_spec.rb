@@ -12,12 +12,6 @@ describe Config do
 
     subject { config.send(:validate_required) }
 
-    # before(:each) do
-    #   allow(Config).to receive(:new).and_return(config)
-    #   allow(config).to receive(:validate_required).and_call_original
-    #   config.
-    # end
-
     context 'a destination bucket is supplied' do
       let(:destination) { 'test-bucket' }
 

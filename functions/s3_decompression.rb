@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-load '../vendor/bundle/bundler/setup.rb'
+load "#{__dir__}/../vendor/bundle/bundler/setup.rb"
 
 require 'aws-sdk-s3'
 require 'aws-xray-sdk/lambda'
 require 'logger'
 require 'zlib'
-require '../lib/config'
-require '../lib/handler'
+require "#{__dir__}/../lib/config"
+require "#{__dir__}/../lib/handler"
 
 $handler = Handler.new(
   config: Config.from_env,

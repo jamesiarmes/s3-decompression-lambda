@@ -10,9 +10,6 @@ functions:
   s3_decompression:
     description: Decompresses files from one S3 bucket and writes them to another.
     handler: functions/s3_decompression.lambda_handler
-    package:
-      include:
-        - functions/s3_decompression.rb
     environment:
       DESTINATION_BUCKET: 'example-bucket'
       DESTINATION_EXTENSION: 'json'
@@ -22,6 +19,7 @@ functions:
 package:
   include:
     - lib/**
+    - functions/**
 
 plugins:
   - serverless-ruby-package

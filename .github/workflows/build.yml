@@ -28,7 +28,7 @@ jobs:
       - name: Install node dependencies
         run: npm install
       - name: Set up Ruby 2.7
-        uses: actions/setup-ruby@v1
+        uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.7.2
       - uses: actions/cache@v1
